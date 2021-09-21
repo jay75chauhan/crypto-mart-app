@@ -9,7 +9,7 @@ import {
   MenuOutlined,
 } from "@ant-design/icons";
 
-import icon from "../images/cryptocurrency.png";
+import logo from "../images/crypto.png";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
@@ -36,9 +36,9 @@ const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="large" />
+        <Avatar src={logo} size="large" />
         <Typography.Title level={2} className="logo">
-          <Link to="/">Cryptoverse</Link>
+          <Link to="/">Crypt Mart</Link>
         </Typography.Title>
         <Button
           className="menu-control-container"
