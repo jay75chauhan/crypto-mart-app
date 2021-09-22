@@ -375,3 +375,16 @@ a:hover {
   padding: 20px;
   align-items: center;
 }
+
+::-webkit-scrollbar {
+  background: #f9fafb;
+
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 21, 41);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
