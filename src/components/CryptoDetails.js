@@ -20,7 +20,7 @@ import {
   useGetCryptoHistoryQuery,
 } from "../services/cryptoApi";
 import Loader from "./Loader";
-// import LineChart from "./LineChart";
+import LineChart from "./LineChart";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -108,21 +108,26 @@ const CryptoDetails = () => {
           statistics, market cap and supply.
         </p>
       </Col>
-      <Select
-        defaultValue="7d"
-        className="select-timeperiod"
-        placeholder="Select Timeperiod"
-        onChange={(value) => setTimeperiod(value)}
-      >
-        {time.map((date) => (
-          <Option key={date}>{date}</Option>
-        ))}
-      </Select>
-      {/* <LineChart
-        coinHistory={coinHistory}
-        currentPrice={millify(cryptoDetails.price)}
-        coinName={cryptoDetails.name}
-      /> */}
+      <Col className="coin-heading-container">
+        <Select
+          defaultValue="7d"
+          className="select-timeperiod"
+          placeholder="Select Timeperiod"
+          onChange={(value) => setTimeperiod(value)}
+          style={{ width: 20 }}
+        >
+          {" "}
+          {time.map((date) => (
+            <Option key={date}>{date}</Option>
+          ))}
+        </Select>
+
+        <LineChart
+          coinHistory={coinHistory}
+          currentPrice={millify(cryptoDetails.price)}
+          coinName={cryptoDetails.name}
+        />
+      </Col>
       <Col className="stats-container">
         <Col className="coin-value-statistics">
           <Col className="coin-value-statistics-heading">

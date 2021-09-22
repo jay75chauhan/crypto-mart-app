@@ -44,7 +44,7 @@ const Navbar = () => {
           className="menu-control-container"
           onClick={() => setActiveMenu(!activeMenu)}
         >
-          <MenuOutlined />
+          <MenuOutlined style={{ padding: 3 }} />
         </Button>
       </div>
       {activeMenu && (

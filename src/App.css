@@ -142,7 +142,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   border-bottom: 1px solid var(--border);
-  padding-top: 20px;
+
   padding-bottom: 20px;
   gap: 10px;
 }
@@ -155,7 +155,6 @@ a:hover {
 .coin-heading-container p {
   font-size: 1rem;
   opacity: 0.9;
-  margin-bottom: 20px;
 }
 
 .stats-container {
@@ -327,7 +326,7 @@ a:hover {
 }
 .price-container {
   display: flex !important;
-  gap: 20px !important;
+  gap: 10px !important;
   align-items: center !important;
   flex-wrap: wrap !important;
 }
@@ -377,7 +376,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar {
-  background: #f9fafb;
+  background: #f0f2f5;
 
   width: 8px;
 }
