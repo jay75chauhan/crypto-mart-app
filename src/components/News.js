@@ -28,6 +28,7 @@ const News = ({ simplified }) => {
         <Col span={24}>
           <Select
             showSearch
+            style={{ width: 500 }}
             className="select-news"
             placeholder="Select a Crypto"
             optionFilterProp="children"
@@ -45,7 +46,7 @@ const News = ({ simplified }) => {
       )}
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
-          <Card hoverable className="news-card">
+          <Card hoverable style={{ borderRadius: 15 }} className="news-card">
             <a href={news.url} target="_blank" rel="noreferrer">
               <div className="news-image-container">
                 <Title className="news-title" level={4}>
@@ -54,6 +55,7 @@ const News = ({ simplified }) => {
                 <img
                   src={news?.image?.thumbnail?.contentUrl || demoImage}
                   alt=""
+                  style={{ borderRadius: 15, maxHeight: 100 }}
                 />
               </div>
               <p>

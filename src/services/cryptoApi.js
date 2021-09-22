@@ -16,16 +16,22 @@ export const cryptoApi = createApi({
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`),
     }),
+    getExchanges: builder.query({
+      query: () => createRequest("/exchanges"),
+    }),
+    getCryptoDetails: builder.query({
+      query: (coinId) => createRequest(`/coin/${coinId}`),
+    }),
+    getCryptoHistory: builder.query({
+      query: ({ coinId, timeperiod }) =>
+        createRequest(`coin/${coinId}/history/${timeperiod}`),
+    }),
   }),
 });
 
-export const { useGetCryptosQuery } = cryptoApi;
-
-// var options = {
-//   method: "GET",
-//   url: "https://coinranking1.p.rapidapi.com/exchanges",
-//   headers: {
-//     "x-rapidapi-host": "coinranking1.p.rapidapi.com",
-//     "x-rapidapi-key": "f765d64139mshd785c60b6db231dp1cc147jsn9bf903e8fc82",
-//   },
-// };
+export const {
+  useGetCryptosQuery,
+  useGetCryptoDetailsQuery,
+  useGetExchangesQuery,
+  useGetCryptoHistoryQuery,
+} = cryptoApi;
